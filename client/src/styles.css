@@ -1,12 +1,9 @@
-/* ============================================================
-   Block Capture — styles.css
-   Design: Clean, minimal, light background. Grid is the star.
-   ============================================================ */
 
-/* ── Google Fonts ── */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ── Reset & base ── */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +11,7 @@
 }
 
 :root {
-  /* Palette */
+  
   --bg:            #f4f5f7;
   --surface:       #ffffff;
   --surface-raise: #fafbfc;
@@ -28,17 +25,17 @@
   --unclaimed-dot: #c4c8d0;
   --danger:        #e63946;
 
-  /* Shadows */
+  
   --shadow-sm:  0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
   --shadow-md:  0 4px 12px rgba(0,0,0,.10), 0 2px 4px rgba(0,0,0,.06);
   --shadow-lg:  0 12px 32px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.08);
 
-  /* Spacing */
+  
   --radius:     10px;
   --radius-lg:  16px;
   --radius-xl:  24px;
 
-  /* Topbar */
+  
   --topbar-h:   60px;
 }
 
@@ -50,9 +47,7 @@ html, body, #root {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ============================================================
-   App shell
-   ============================================================ */
+
 
 .app {
   display: flex;
@@ -60,9 +55,7 @@ html, body, #root {
   min-height: 100vh;
 }
 
-/* ============================================================
-   Top bar
-   ============================================================ */
+
 
 .topbar {
   position: sticky;
@@ -96,7 +89,7 @@ html, body, #root {
   justify-content: center;
 }
 
-/* Brand */
+
 .brand {
   display: flex;
   align-items: center;
@@ -118,7 +111,7 @@ html, body, #root {
   background-clip: text;
 }
 
-/* Identity chip */
+
 .identity-chip {
   display: flex;
   align-items: center;
@@ -151,7 +144,7 @@ html, body, #root {
   border-left: 1px solid var(--border);
 }
 
-/* Online badge */
+
 .online-badge {
   display: flex;
   align-items: center;
@@ -173,7 +166,7 @@ html, body, #root {
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
-/* Cooldown ring */
+
 .cooldown-ring-wrap {
   position: relative;
   display: flex;
@@ -217,9 +210,7 @@ html, body, #root {
   color: var(--danger);
 }
 
-/* ============================================================
-   Main content
-   ============================================================ */
+
 
 .main-content {
   flex: 1;
@@ -232,9 +223,7 @@ html, body, #root {
   align-items: flex-start;
 }
 
-/* ============================================================
-   Grid
-   ============================================================ */
+
 
 .grid-wrapper {
   flex: 1;
@@ -254,7 +243,7 @@ html, body, #root {
   aspect-ratio: 1;
 }
 
-/* ── Block base ── */
+
 .block {
   position: relative;
   aspect-ratio: 1;
@@ -268,7 +257,7 @@ html, body, #root {
   outline: none;
 }
 
-/* Unclaimed block */
+
 .block.unclaimed {
   background: var(--unclaimed-bg);
   border: 1.5px solid var(--border);
@@ -282,7 +271,7 @@ html, body, #root {
   box-shadow: 0 2px 8px rgba(79,110,247,.25);
 }
 
-/* Claimed block */
+
 .block.claimed {
   border: 1.5px solid rgba(255,255,255,.3);
   box-shadow: inset 0 1px 2px rgba(255,255,255,.25), 0 1px 3px rgba(0,0,0,.15);
@@ -295,7 +284,7 @@ html, body, #root {
   box-shadow: inset 0 1px 2px rgba(255,255,255,.25), 0 3px 10px rgba(0,0,0,.2);
 }
 
-/* Own block — subtle inner dot */
+
 .block-dot {
   width: 4px;
   height: 4px;
@@ -304,14 +293,14 @@ html, body, #root {
   pointer-events: none;
 }
 
-/* Cooldown active — cursor hint */
+
 .block.cooldown-active {
   cursor: not-allowed;
 }
 
-/* ── Animations ── */
 
-/* Pop: triggered when block_updated arrives */
+
+
 @keyframes pop {
   0%   { transform: scale(1); }
   40%  { transform: scale(1.18); }
@@ -323,7 +312,7 @@ html, body, #root {
   animation: pop 0.22s cubic-bezier(.36,.07,.19,.97) forwards;
 }
 
-/* Shake: pending indicator (immediate click feedback) */
+
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20%       { transform: translateX(-3px); }
@@ -337,15 +326,13 @@ html, body, #root {
   opacity: 0.8;
 }
 
-/* Pulse dot */
+
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.5; }
 }
 
-/* ============================================================
-   Leaderboard sidebar
-   ============================================================ */
+
 
 .leaderboard {
   width: 200px;
@@ -423,7 +410,7 @@ html, body, #root {
   flex-shrink: 0;
 }
 
-/* Legend */
+
 .legend {
   display: flex;
   flex-direction: column;
@@ -450,7 +437,7 @@ html, body, #root {
   background: var(--unclaimed-bg);
 }
 
-/* How to play */
+
 .how-to-play h3 {
   font-size: 0.78rem;
   font-weight: 700;
@@ -482,9 +469,7 @@ html, body, #root {
   font-weight: 700;
 }
 
-/* ============================================================
-   Modal (Name Prompt)
-   ============================================================ */
+
 
 .modal-overlay {
   position: fixed;
@@ -642,7 +627,7 @@ html, body, #root {
   text-align: center;
 }
 
-/* Spinner */
+
 .spinner {
   width: 18px;
   height: 18px;
@@ -656,9 +641,7 @@ html, body, #root {
   to { transform: rotate(360deg); }
 }
 
-/* ============================================================
-   Toast
-   ============================================================ */
+
 
 .toast {
   position: fixed;
@@ -683,9 +666,7 @@ html, body, #root {
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-/* ============================================================
-   Responsive
-   ============================================================ */
+
 
 @media (max-width: 900px) {
   .main-content {

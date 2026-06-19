@@ -12,7 +12,6 @@ function randomName() {
 }
 
 export default function NamePrompt({ onJoined }) {
-  // Pre-fill with stored name if available (server unreachable during auto-join)
   const [name, setName] = useState(
     () => localStorage.getItem('capture_name') || randomName()
   );
@@ -33,7 +32,6 @@ export default function NamePrompt({ onJoined }) {
     setLoading(true);
     setError('');
 
-    // Send existing userId so the server can restore color (if known)
     const existingId = localStorage.getItem('capture_userId');
 
     if (!socket.connected) {
@@ -64,9 +62,9 @@ export default function NamePrompt({ onJoined }) {
     <div className="modal-overlay">
       <div className="modal-card">
         <div className="modal-logo">
-          <span className="logo-icon">⬛</span>
-          <span className="logo-icon accent">🟦</span>
-          <span className="logo-icon">⬛</span>
+          <span className="logo-icon"></span>
+          <span className="logo-icon accent"></span>
+          <span className="logo-icon"></span>
         </div>
         <h1 className="modal-title">Block Capture</h1>
         <p className="modal-subtitle">
@@ -99,7 +97,7 @@ export default function NamePrompt({ onJoined }) {
               disabled={loading}
               type="button"
             >
-              🎲
+              Roll
             </button>
           </div>
           {error && <p className="field-error">{error}</p>}

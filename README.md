@@ -1,4 +1,4 @@
-# Block Capture 🎮
+# Block Capture 
 
 A real-time, multiplayer block-claiming game built on a shared 20×20 grid. Click to capture, release, or steal blocks — every action is instantly visible to every connected player via WebSockets. No login. No database. Just play.
 
@@ -6,7 +6,7 @@ A real-time, multiplayer block-claiming game built on a shared 20×20 grid. Clic
 
 ---
 
-## 🌟 Features
+##  Features
 
 - **Real-time Multiplayer** – WebSocket-powered synchronization across all connected players
 - **No Auth Required** – Play instantly; UUID-based identity persists across refreshes
@@ -19,7 +19,7 @@ A real-time, multiplayer block-claiming game built on a shared 20×20 grid. Clic
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -62,7 +62,7 @@ cd ../client && npm install    # client dependencies
 
 ---
 
-## 🎮 How to Play
+##  How to Play
 
 1. **Enter Your Name** – On first visit, a modal prompts for a display name. Subsequent visits auto-restore your identity.
 2. **Capture a Block** – Click any unclaimed (white/light) block to claim it with your color.
@@ -83,7 +83,7 @@ cd ../client && npm install    # client dependencies
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Technology Stack
 
@@ -123,7 +123,7 @@ The game requires instant play with zero friction:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Capture-Grid/
@@ -192,7 +192,7 @@ Capture-Grid/
 
 ---
 
-## 🔌 Socket.io Events Reference
+##  Socket.io Events Reference
 
 ### Client → Server
 
@@ -268,7 +268,7 @@ Capture-Grid/
 
 ---
 
-## 🌐 REST API Endpoints
+##  REST API Endpoints
 
 ### `GET /api/grid`
 
@@ -301,7 +301,7 @@ Capture-Grid/
 
 ---
 
-## 🎨 Game Mechanics in Detail
+##  Game Mechanics in Detail
 
 ### The Cooldown Algorithm
 
@@ -317,7 +317,7 @@ Capture-Grid/
 **Client Behavior:**
 - On `cooldown_rejected`, show countdown timer
 - Animation continues during cooldown; button is still clickable but requests are dropped
-- Toast shows "⏱ Wait Xs before your next move"
+- Toast shows " Wait Xs before your next move"
 
 ---
 
@@ -353,7 +353,7 @@ Derived client-side on every `block_updated`:
 
 ---
 
-## 🎯 Performance Notes
+##  Performance Notes
 
 ### Network
 
@@ -374,7 +374,7 @@ Derived client-side on every `block_updated`:
 
 ---
 
-## 🔧 Configuration
+##  Configuration
 
 ### Server
 
@@ -405,7 +405,7 @@ If not set, defaults to `http://localhost:3001`.
 
 ---
 
-## 🚀 Scaling & Deployment
+##  Scaling & Deployment
 
 ### Local Development
 
@@ -494,7 +494,7 @@ Or snapshot on player disconnect for lightweight persistence.
 
 ---
 
-## 🛠️ Development
+##  Development
 
 ### Running Tests
 
@@ -536,7 +536,7 @@ cd client && npm run lint -- --fix
 
 ---
 
-## 📝 File-by-File Overview
+##  File-by-File Overview
 
 ### Server Files
 
@@ -597,7 +597,7 @@ cd client && npm run lint -- --fix
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Issue: "Cannot GET /api/grid"
 - **Cause:** Server not running
@@ -641,7 +641,7 @@ cd client && npm run lint -- --fix
 
 ---
 
-## 📊 Metrics & Monitoring
+##  Metrics & Monitoring
 
 ### Suggested Metrics
 
@@ -662,13 +662,13 @@ setInterval(() => {
 
 ---
 
-## 📄 License
+##  License
 
 MIT License – see LICENSE file for details.
 
 ---
 
-## 🎓 Learning Resources
+##  Learning Resources
 
 - **Socket.io Docs:** https://socket.io/docs/
 - **React Hooks:** https://react.dev/reference/react
@@ -678,7 +678,7 @@ MIT License – see LICENSE file for details.
 
 ---
 
-## 🤝 Support & Feedback
+##  Support & Feedback
 
 Found a bug? Have a feature idea?
 
@@ -691,7 +691,7 @@ Found a bug? Have a feature idea?
 
 ---
 
-## ✅ Acceptance Checklist
+##  Acceptance Checklist
 
 - [x] Two browser tabs: clicking in tab A instantly recolors in tab B
 - [x] Clicking own block releases it for everyone

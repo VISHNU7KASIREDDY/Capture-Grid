@@ -36,17 +36,14 @@ function handleCapture(userId, blockId, users) {
   if (!block) return { rejected: true, remainingMs: 0 };
 
   if (block.owner === null) {
-    // Unclaimed → capture it
     block.owner = userId;
     block.color = user.color;
     block.capturedAt = now;
   } else if (block.owner === userId) {
-    // Own block → release it
     block.owner = null;
     block.color = null;
     block.capturedAt = null;
   } else {
-    // Someone else's block → steal it
     block.owner = userId;
     block.color = user.color;
     block.capturedAt = now;

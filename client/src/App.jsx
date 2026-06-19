@@ -32,7 +32,6 @@ export default function App() {
     const existingName = localStorage.getItem('capture_name');
 
     if (existingId && existingName) {
-      // Silently reconnect without forcing the user through the name modal again
       setAutoJoining(true);
       socket.connect();
       socket.emit('join', { name: existingName, userId: existingId }, (data) => {
@@ -49,7 +48,6 @@ export default function App() {
         }
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const showToast = useCallback((message) => {
@@ -95,7 +93,7 @@ export default function App() {
       setCooldownUntil(until);
       setPendingBlockId(null);
       const secs = (remainingMs / 1000).toFixed(1);
-      showToast(`⏱ Wait ${secs}s before your next move`);
+      showToast(`Wait ${secs}s before your next move`);
     };
 
     const handlePresenceUpdate = ({ onlineCount: count, names }) => {
@@ -161,9 +159,9 @@ export default function App() {
       <div className="modal-overlay">
         <div className="modal-card" style={{ gap: 16 }}>
           <div className="modal-logo">
-            <span className="logo-icon">⬛</span>
-            <span className="logo-icon accent">🟦</span>
-            <span className="logo-icon">⬛</span>
+            <span className="logo-icon"></span>
+            <span className="logo-icon accent"></span>
+            <span className="logo-icon"></span>
           </div>
           <h1 className="modal-title">Block Capture</h1>
           <span className="spinner" style={{ margin: '8px auto', borderColor: 'rgba(79,110,247,.3)', borderTopColor: '#4f6ef7' }} />
@@ -182,7 +180,7 @@ export default function App() {
       <header className="topbar">
         <div className="topbar-left">
           <div className="brand">
-            <span className="brand-icon">⬛</span>
+            <span className="brand-icon"></span>
             <span className="brand-name">Block Capture</span>
           </div>
         </div>
